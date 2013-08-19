@@ -40,6 +40,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
         <?php tpl_includeFile('header.html') ?>
 
+        <?php if ($conf['useacl'] && $showTools): ?>
+
         <!-- ********** HEADER ********** -->
         <div id="dokuwiki__header"><div class="pad">
 
@@ -60,7 +62,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
             <div class="tools">
                 <!-- USER TOOLS -->
-                <?php if ($conf['useacl'] && $showTools): ?>
                     <div id="dokuwiki__usertools">
                         <h3 class="a11y"><?php echo $lang['user_tools'] ?></h3>
                         <ul>
@@ -79,7 +80,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                             ?>
                         </ul>
                     </div>
-                <?php endif ?>
 
                 <!-- SITE TOOLS -->
                 <div id="dokuwiki__sitetools">
@@ -109,6 +109,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
             <hr class="a11y" />
         </div></div><!-- /header -->
 
+        <?php endif ?>
 
         <div class="wrapper">
 

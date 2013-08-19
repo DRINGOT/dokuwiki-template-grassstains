@@ -1,0 +1,157 @@
+/** Site **/
+
+html, body {
+
+    background: #efefef;
+
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: #000000;
+    padding:0 0 0 0;
+}
+
+#dokuwiki__top {
+
+    border:1px solid #9EB874;
+
+}
+
+/** Header **/
+
+#header {
+
+    position:relative;
+    margin:0 auto;
+    padding:0 0 0 0;
+    text-align:left;
+    background: #ffffff url(images/header.jpg) no-repeat;
+
+}
+
+#header #logo {
+    position:relative;
+    clear:none;
+    height:125px;
+    margin:0;
+    padding:0;
+    background:transparent;
+    color:#ffffff;
+    text-align:right;
+}
+
+#header #logo strong {
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color:#ffffff;
+    font-size:13pt;
+    letter-spacing:.7em;
+    font-weight: normal;
+
+}
+
+#header #nav {
+    position:relative;
+    clear:both;
+    height:21px;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    background:#cccccc;
+    font-size:8pt;
+}
+
+#nav ul{
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+    white-space: nowrap;
+    font-size:8pt;
+    color:#ffffff;
+    float:left;
+    background:#ffffff url(images/topnav_bg_grey.png);
+    list-style:none;
+    width: 100%;
+}
+
+#nav ul li{
+    list-style:none;
+}
+
+#nav ul li a {
+    margin: 0 0 0 0;
+    padding: .25em 2em .3em 2em;
+    background:#ffffff url(images/topnav_bg_grey.png);
+    color: #000000;
+    text-decoration:none;
+    float: left;
+    border-right:1px solid #cccccc;
+}
+
+#nav ul li a:hover {
+    background: #8DA8D5 url(images/topnav_bg_green.png);
+    color: #ffffff;
+    text-decoration:none;
+    border-right:1px solid #cccccc;
+}
+
+/** Content **/
+
+#dokuwiki__site .wrapper {
+    position:relative;
+    clear:both;
+    padding: 1em;
+    background:#ffffff;
+    color:#000000;
+    text-align:left;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:#697D55 !important;
+}
+
+h1 {
+
+    font-size: 200%;
+
+}
+
+h2 {
+
+    font-size: 150%;
+
+}
+
+h3 {
+
+    font-size: 120%;
+    font-weight: bold;
+
+}
+
+/** Footer **/
+
+#dokuwiki__footer {
+
+    display:none
+
+}
+
+#footer {
+
+    margin: 0;
+    position:relative;
+    clear:both;
+    padding:4px 0 4px 0;
+    background:#ffffff;
+    font-size:8pt;
+    text-align:center;
+    border-top:1px solid #9EB874;
+}
+
