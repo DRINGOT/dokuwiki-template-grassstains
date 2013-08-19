@@ -1,7 +1,7 @@
-base     dokuwiki-template-franzcarlendres
+base     dokuwiki-template-grasstains
 author   Dennis Plöger
 email    develop@dieploegers.de
-date     2013-04-01
-name     Template for franzcarlendres.de
+date     2013-08-19
+name     Template based on grass_stains by pogy366
 desc     Template for franzcarlendres.de
-url      http://franzcarlendres.de
+url      http://dokuwiki.org/template:grassstains

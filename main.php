@@ -1,10 +1,11 @@
 <?php
 /**
- * DokuWiki Starter Template
+ * DokuWiki Grass Stains template
  *
- * @link     http://dokuwiki.org/template:starter
- * @author   Anika Henke <anika@selfthinker.org>
+ * @link     http://dokuwiki.org/template:grassstaings
+ * @author   Dennis Plöger <develop@dieploegers.de>
  * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @see      Dokuwiki Starter Template at http://dokuwiki.org/template:starter *
  */
 
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
