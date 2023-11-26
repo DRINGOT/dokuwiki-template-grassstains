@@ -11,7 +11,7 @@
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 @require_once(dirname(__FILE__).'/tpl_functions.php'); /* include hook for template functions */
 
-$showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER['REMOTE_USER'] );
+$showTools = !tpl_getConf('hideTools');
 $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang'] ?>"
@@ -66,18 +66,12 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                     <div id="dokuwiki__usertools">
                         <h3 class="a11y"><?php echo $lang['user_tools'] ?></h3>
                         <ul>
-                            <?php /* the optional second parameter of tpl_action() switches between a link and a button,
-                                     e.g. a button inside a <li> would be: tpl_action('edit', 0, 'li') */
-                                if ($_SERVER['REMOTE_USER']) {
-                                    echo '<li class="user">';
-                                    tpl_userinfo(); /* 'Logged in as ...' */
-                                    echo '</li>';
-                                }
-                                tpl_action('admin', 1, 'li');
-                                _tpl_action('userpage', 1, 'li');
-                                tpl_action('profile', 1, 'li');
-                                tpl_action('register', 1, 'li'); /* DW versions < 2011-02-20 need to use _tpl_action('register', 1, 'li') */
-                                tpl_action('login', 1, 'li');
+                            <?php
+                                echo '<li class="user">';
+                                tpl_userinfo(); /* 'Logged in as ...' */
+                                echo '</li>';
+
+                                echo (new \dokuwiki\Menu\UserMenu())->getListItems();
                             ?>
                         </ul>
                     </div>
@@ -88,9 +82,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                     <?php tpl_searchform() ?>
                     <ul>
                         <?php
-                            tpl_action('recent', 1, 'li');
-                            tpl_action('media', 1, 'li');
-                            tpl_action('index', 1, 'li');
+                            echo (new \dokuwiki\Menu\SiteMenu())->getListItems();
                         ?>
                     </ul>
                 </div>
@@ -149,13 +141,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                     <h3 class="a11y"><?php echo $lang['page_tools'] ?></h3>
                     <ul>
                         <?php
-                            tpl_action('edit', 1, 'li');
-                            _tpl_action('discussion', 1, 'li');
-                            tpl_action('revisions', 1, 'li');
-                            tpl_action('backlink', 1, 'li');
-                            tpl_action('subscribe', 1, 'li');
-                            tpl_action('revert', 1, 'li');
-                            tpl_action('top', 1, 'li');
+                            echo (new \dokuwiki\Menu\PageMenu())->getListItems();
                         ?>
                     </ul>
                 </div>
